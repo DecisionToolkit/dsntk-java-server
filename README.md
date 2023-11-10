@@ -19,7 +19,7 @@
 external functions written in Java. Details can be found in the document
 **Decision Model and Notation Version 1.4** on pages 117-118 (externally-defined functions).
 
-While [Decision Toolkit](https://github.com/dsntk/dsntk.rs) (**DSNTK**)
+While [Decision Toolkit](https://github.com/dsntk/dsntk-rs) (**DSNTK**)
 is written in [Rust](https://www.rust-lang.org), then calling Java functions requires
 an RPC (Remote Procedure Call) server. This project is a Java implementation of such server.
 
