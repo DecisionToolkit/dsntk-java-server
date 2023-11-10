@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <property name="LOG_FILE" value="log/server.log"/>
+
+  <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+  <springProfile name="dev">
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="org.apache" level="INFO"/>
+    <logger name="io.dsntk" level="DEBUG"/>
+  </springProfile>
+
+  <springProfile name="prod">
+    <logger name="org.springframework" level="ERROR"/>
+    <logger name="org.apache" level="ERROR"/>
+    <logger name="io.dsntk" level="INFO"/>
+  </springProfile>
+
+  <springProfile name="test">
+    <logger name="org.springframework" level="ERROR"/>
+    <logger name="org.apache" level="ERROR"/>
+    <logger name="io.dsntk" level="ERROR"/>
+  </springProfile>
+
+</configuration>

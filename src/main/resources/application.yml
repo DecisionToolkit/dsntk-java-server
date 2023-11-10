@@ -1,0 +1,17 @@
+app:
+  name: "Java RPC server for Decision Toolkit"
+  version: 0.0.1
+
+spring:
+  main:
+    banner-mode: off
+  mvc:
+    throw-exception-if-no-handler-found: true
+  profiles:
+    active: prod
+  web:
+    resources:
+      add-mappings: false
+
+server:
+  port: 22023
