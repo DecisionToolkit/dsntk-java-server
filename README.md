@@ -36,7 +36,7 @@ built from source or run in Docker container.
 1. Clone this repository.
 2. Install Java 17 or newer.
 3. Install Maven.
-4. Build:
+4. Build the server:
 
 ```shell
 $ mvn package
