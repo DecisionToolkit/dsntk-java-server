@@ -22,8 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lowercase repository owner name
-        run: |
-          echo "REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >>${GITHUB_ENV}
+        run:  echo "REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >>${GITHUB_ENV}
 
       - name: Checkout repository
         uses: actions/checkout@v5
