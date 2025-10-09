@@ -12,7 +12,7 @@
     <relativePath/>
   </parent>
 
-  <groupId>io.dsntk</groupId>
+  <groupId>org.decisiontoolkit</groupId>
   <artifactId>server</artifactId>
   <version>0.0.2</version>
 

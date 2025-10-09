@@ -7,19 +7,19 @@
   <springProfile name="dev">
     <logger name="org.springframework" level="INFO"/>
     <logger name="org.apache" level="INFO"/>
-    <logger name="io.dsntk" level="DEBUG"/>
+  <logger name="org.decisiontoolkit" level="DEBUG"/>
   </springProfile>
 
   <springProfile name="prod">
     <logger name="org.springframework" level="ERROR"/>
     <logger name="org.apache" level="ERROR"/>
-    <logger name="io.dsntk" level="INFO"/>
+  <logger name="org.decisiontoolkit" level="INFO"/>
   </springProfile>
 
   <springProfile name="test">
     <logger name="org.springframework" level="ERROR"/>
     <logger name="org.apache" level="ERROR"/>
-    <logger name="io.dsntk" level="ERROR"/>
+  <logger name="org.decisiontoolkit" level="ERROR"/>
   </springProfile>
 
 </configuration>

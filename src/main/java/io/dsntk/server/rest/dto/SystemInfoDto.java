@@ -1,4 +1,4 @@
-package io.dsntk.server.rest.dto;
+package org.decisiontoolkit.server.rest.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AccessLevel;

@@ -1,7 +1,7 @@
-package io.dsntk.server;
+package org.decisiontoolkit.server;
 
-import io.dsntk.server.rest.controllers.RpcController;
-import io.dsntk.server.rest.controllers.SystemController;
+import org.decisiontoolkit.server.rest.controllers.RpcController;
+import org.decisiontoolkit.server.rest.controllers.SystemController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

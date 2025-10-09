@@ -1,8 +1,8 @@
-package io.dsntk.server.rest.controllers;
+package org.decisiontoolkit.server.rest.controllers;
 
-import io.dsntk.server.rest.dto.ResultDto;
-import io.dsntk.server.rest.dto.SystemInfoDto;
-import io.dsntk.server.rest.dto.SystemInfoDtoFactory;
+import org.decisiontoolkit.server.rest.dto.ResultDto;
+import org.decisiontoolkit.server.rest.dto.SystemInfoDto;
+import org.decisiontoolkit.server.rest.dto.SystemInfoDtoFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

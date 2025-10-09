@@ -1,7 +1,7 @@
-package io.dsntk.server.rest.params;
+package org.decisiontoolkit.server.rest.params;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.dsntk.server.rest.dto.ValueDto;
+import org.decisiontoolkit.server.rest.dto.ValueDto;
 import lombok.Getter;
 import lombok.Setter;
 

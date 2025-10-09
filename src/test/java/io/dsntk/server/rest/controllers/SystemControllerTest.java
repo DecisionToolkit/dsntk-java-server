@@ -1,6 +1,6 @@
-package io.dsntk.server.rest.controllers;
+package org.decisiontoolkit.server.rest.controllers;
 
-import io.dsntk.server.RpcServerApplication;
+import org.decisiontoolkit.server.RpcServerApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

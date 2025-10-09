@@ -1,4 +1,4 @@
-package io.dsntk.server.common;
+package org.decisiontoolkit.server.common;
 
 import org.junit.jupiter.api.Test;
 

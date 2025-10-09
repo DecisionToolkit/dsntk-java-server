@@ -1,10 +1,10 @@
-package io.dsntk.server.rest.dto;
+package org.decisiontoolkit.server.rest.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.dsntk.server.common.CastType;
-import io.dsntk.server.common.Utils;
-import io.dsntk.server.common.XsdType;
-import io.dsntk.server.rest.errors.RpcException;
+import org.decisiontoolkit.server.common.CastType;
+import org.decisiontoolkit.server.common.Utils;
+import org.decisiontoolkit.server.common.XsdType;
+import org.decisiontoolkit.server.rest.errors.RpcException;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package io.dsntk.server.rest.dto;
+package org.decisiontoolkit.server.rest.dto;
 
 import org.springframework.stereotype.Service;
 

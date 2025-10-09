@@ -1,6 +1,6 @@
-package io.dsntk.server.common;
+package org.decisiontoolkit.server.common;
 
-import io.dsntk.server.rest.errors.RpcException;
+import org.decisiontoolkit.server.rest.errors.RpcException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,7 +1,7 @@
-package org.decisiontoolkit..server.services;
+package org.decisiontoolkit.server.services;
 
-import org.decisiontoolkit..server.rest.dto.ValueDto;
-import org.decisiontoolkit..server.rest.errors.RpcException;
+import org.decisiontoolkit.server.rest.dto.ValueDto;
+import org.decisiontoolkit.server.rest.errors.RpcException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

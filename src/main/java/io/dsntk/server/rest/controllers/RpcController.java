@@ -1,10 +1,10 @@
-package io.dsntk.server.rest.controllers;
+package org.decisiontoolkit.server.rest.controllers;
 
-import io.dsntk.server.rest.dto.ResultDto;
-import io.dsntk.server.rest.dto.ValueDto;
-import io.dsntk.server.rest.errors.RpcException;
-import io.dsntk.server.rest.params.RpcParams;
-import io.dsntk.server.services.RpcService;
+import org.decisiontoolkit.server.rest.dto.ResultDto;
+import org.decisiontoolkit.server.rest.dto.ValueDto;
+import org.decisiontoolkit.server.rest.errors.RpcException;
+import org.decisiontoolkit.server.rest.params.RpcParams;
+import org.decisiontoolkit.server.services.RpcService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

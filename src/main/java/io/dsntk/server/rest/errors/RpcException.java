@@ -1,4 +1,4 @@
-package io.dsntk.server.rest.errors;
+package org.decisiontoolkit.server.rest.errors;
 
 public class RpcException extends Exception {
 
