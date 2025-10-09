@@ -14,15 +14,21 @@ import lombok.Setter;
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 public class ComponentDto {
 
-  /** Name of the value's component. */
-  @JsonProperty("name")
-  private String name;
+    /**
+     * Name of the value's component.
+     */
+    @JsonProperty("name")
+    private String name;
 
-  /** Value of the component. */
-  @JsonProperty("value")
-  private ValueDto value;
+    /**
+     * Value of the component.
+     */
+    @JsonProperty("value")
+    private ValueDto value;
 
-  /** Flag indicating if the value of the component is `nil`. */
-  @JsonProperty("isNil")
-  private boolean nil;
+    /**
+     * Flag indicating if the value of the component is `nil`.
+     */
+    @JsonProperty("isNil")
+    private boolean nil;
 }

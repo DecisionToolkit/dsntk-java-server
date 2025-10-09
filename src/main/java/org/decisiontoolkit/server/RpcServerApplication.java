@@ -14,35 +14,35 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RpcServerApplication implements ApplicationRunner {
 
-  /**
-   * Port number of the server.
-   */
-  @Value("${server.port}")
-  private Integer port;
+    /**
+     * Port number of the server.
+     */
+    @Value("${server.port}")
+    private Integer port;
 
-  @Value("${app.version}")
-  private String appVersion;
+    @Value("${app.version}")
+    private String appVersion;
 
-  @Value("${app.name}")
-  private String appName;
+    @Value("${app.name}")
+    private String appName;
 
-  /**
-   * Application entrypoint.
-   *
-   * @param args Command-line arguments.
-   */
-  public static void main(String[] args) {
-    SpringApplication.run(RpcServerApplication.class, args);
-  }
+    /**
+     * Application entrypoint.
+     *
+     * @param args Command-line arguments.
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(RpcServerApplication.class, args);
+    }
 
-  /**
-   * Callback function called after server is started.
-   *
-   * @param args Arguments passed to application.
-   */
-  @Override
-  public void run(ApplicationArguments args) {
-    log.info("{}, version {}", appName, appVersion);
-    log.info("Java RPC server started on port: {}", port);
-  }
+    /**
+     * Callback function called after server is started.
+     *
+     * @param args Arguments passed to application.
+     */
+    @Override
+    public void run(ApplicationArguments args) {
+        log.info("{}, version {}", appName, appVersion);
+        log.info("Java RPC server started on port: {}", port);
+    }
 }
