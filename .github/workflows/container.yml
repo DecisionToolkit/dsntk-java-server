@@ -33,3 +33,9 @@ jobs:
 
       - name: Build using Maven
         run: mvn package
+
+      - name: Upload the package
+        uses: actions/upload-artifact@v4
+        with:
+          name: server
+          path: target/server-*.jar
