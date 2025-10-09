@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  packages: write
+
 env:
   RPC_SERVER_VERSION: 0.0.2
 
@@ -20,10 +24,6 @@ jobs:
       - name: Prepare the lowercase name of the repository owner
         run: | 
           echo "REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >>${GITHUB_ENV}
-
-#      - name: use REPO
-#        run: |
-#          echo "The value of repository owner is: ${{ env.REPOSITORY_OWNER }}"
 
       - name: Checkout repository
         uses: actions/checkout@v5
