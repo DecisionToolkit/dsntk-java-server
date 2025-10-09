@@ -93,4 +93,5 @@ at your option.
 
 Any contributions are greatly appreciated. If you would like to get involved,
 please don't hesitate to reach out to us. All contributions intentionally submitted
-for inclusion in the work by you, shall be dual licensed as above, without any additional terms or conditions.
+for inclusion in the work by you, shall be dual licensed as above, without any additional
+terms or conditions.
