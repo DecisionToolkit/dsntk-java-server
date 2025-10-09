@@ -18,11 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show
-        run: echo "REPO=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >>${GITHUB_ENV}
+        run: | 
+          echo "REPOSITORY_OWNER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >>${GITHUB_ENV}
 
       - name: use REPO
         run: |
-          echo "The value of REPO is: ${REPO}"
+          echo "The value of repository owner is: ${REPOSITORY_OWNER}"
 
 #      - name: downcase REPO
 #        run: |
