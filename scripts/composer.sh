@@ -2,22 +2,14 @@
 
 # Set variables.
 NAME=rpc
-VERSION=0.0.2
 
 # Clean before proceeding.
-mvn clean
 echo "Stopped container: $(docker stop $NAME)"
 echo "Removed container: $(docker rm $NAME)"
 docker rmi "$(docker images | grep /$NAME | awk '{print $3}' | xargs)"
 
-# Build the RPC server.
-mvn package
-
 # Build the docker image.
-docker build -t local/$NAME:$VERSION .
-
-# Start the container.
-docker run --name $NAME -d --restart always -p 22023:22023 local/$NAME:$VERSION
+docker-compose up -d
 
 # Wait for the server to start inside the container.
 echo -e "\nWaiting 5s..."

@@ -19,6 +19,11 @@ tasks:
     cmds:
       - cmd: ./scripts/container.sh
 
+  composer:
+    desc: Rebuilds the Docker container using docker-compose
+    cmds:
+      - cmd: ./scripts/composer.sh
+
   package:
     desc: Packages the application
     cmds:

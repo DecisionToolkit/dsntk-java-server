@@ -1,0 +1,13 @@
+services:
+
+  rpc:
+    image: ghcr.io/decisiontoolkit/rpc:0.0.2
+    container_name: rpc
+    restart: always
+    ports:
+      - "22023:22023"
+    networks:
+      - rpc
+
+networks:
+  rpc:
