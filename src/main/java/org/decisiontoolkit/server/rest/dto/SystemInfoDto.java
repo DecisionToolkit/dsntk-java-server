@@ -14,16 +14,16 @@ import lombok.Setter;
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 public class SystemInfoDto {
 
-    /**
-     * Application name.
-     */
-    @JsonProperty("name")
-    private String name;
+  /**
+   * Application name.
+   */
+  @JsonProperty("name")
+  private String name;
 
-    /**
-     * Application version.
-     */
-    @JsonProperty("version")
-    private String version;
+  /**
+   * Application version.
+   */
+  @JsonProperty("version")
+  private String version;
 
 }

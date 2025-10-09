@@ -8,17 +8,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class SystemInfoDtoFactory {
 
-    /**
-     * Creates DTO object containing system info.
-     *
-     * @param name    Application name.
-     * @param version Application version.
-     * @return Result DTO.
-     */
-    public ResultDto<SystemInfoDto> from(String name, String version) {
-        SystemInfoDto dto = new SystemInfoDto();
-        dto.setName(name);
-        dto.setVersion(version);
-        return new ResultDto<>(dto);
-    }
+  /**
+   * Creates DTO object containing system info.
+   *
+   * @param name    Application name.
+   * @param version Application version.
+   * @return Result DTO.
+   */
+  public ResultDto<SystemInfoDto> from(String name, String version) {
+    SystemInfoDto dto = new SystemInfoDto();
+    dto.setName(name);
+    dto.setVersion(version);
+    return new ResultDto<>(dto);
+  }
 }

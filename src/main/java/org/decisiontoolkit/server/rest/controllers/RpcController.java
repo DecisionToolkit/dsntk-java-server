@@ -19,22 +19,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(RequestMappings.M_RPC_SERVER)
 public class RpcController {
 
-    private final RpcService rpcService;
+  private final RpcService rpcService;
 
-    /**
-     * Initializes RPC controller.
-     */
-    public RpcController(RpcService rpcService) {
-        this.rpcService = rpcService;
-    }
+  /**
+   * Initializes RPC controller.
+   */
+  public RpcController(RpcService rpcService) {
+    this.rpcService = rpcService;
+  }
 
-    /**
-     * Returns system info.
-     *
-     * @return System info DTO wrapped in ResultDTO.
-     */
-    @PostMapping(RequestMappings.M_V1 + RequestMappings.M_RPC_EVALUATE)
-    public ResultDto<ValueDto> evaluate(@RequestBody RpcParams params) throws RpcException {
-        return new ResultDto<>(this.rpcService.evaluate(params.getClassName(), params.getMethodName(), params.getParameterTypes(), params.getArguments()));
-    }
+  /**
+   * Returns system info.
+   *
+   * @return System info DTO wrapped in ResultDTO.
+   */
+  @PostMapping(RequestMappings.M_V1 + RequestMappings.M_RPC_EVALUATE)
+  public ResultDto<ValueDto> evaluate(@RequestBody RpcParams params) throws RpcException {
+    return new ResultDto<>(this.rpcService.evaluate(params.getClassName(), params.getMethodName(), params.getParameterTypes(), params.getArguments()));
+  }
 }

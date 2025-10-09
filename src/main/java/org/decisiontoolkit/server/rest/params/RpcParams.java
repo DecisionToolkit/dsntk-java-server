@@ -10,21 +10,21 @@ import java.util.ArrayList;
 @Getter
 @Setter
 public class RpcParams {
-    /**
-     * Name of the class where called static method is defined.
-     */
-    @JsonProperty("className")
-    private String className;
+  /**
+   * Name of the class where called static method is defined.
+   */
+  @JsonProperty("className")
+  private String className;
 
-    /**
-     * Name of the method to be called.
-     */
-    @JsonProperty("methodName")
-    private String methodName;
+  /**
+   * Name of the method to be called.
+   */
+  @JsonProperty("methodName")
+  private String methodName;
 
-    @JsonProperty("parameterTypes")
-    private ArrayList<String> parameterTypes;
+  @JsonProperty("parameterTypes")
+  private ArrayList<String> parameterTypes;
 
-    @JsonProperty("arguments")
-    private ArrayList<ValueDto> arguments;
+  @JsonProperty("arguments")
+  private ArrayList<ValueDto> arguments;
 }

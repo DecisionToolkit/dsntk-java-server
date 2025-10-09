@@ -16,15 +16,15 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @ContextConfiguration(classes = RpcServerApplication.class)
 public class RpcServerApplicationTest {
 
-    @Autowired
-    private SystemController systemController;
+  @Autowired
+  private SystemController systemController;
 
-    @Autowired
-    private RpcController rpcController;
+  @Autowired
+  private RpcController rpcController;
 
-    @Test
-    public void contextLoads() {
-        assertThat(systemController).isNotNull();
-        assertNotNull(rpcController);
-    }
+  @Test
+  public void contextLoads() {
+    assertThat(systemController).isNotNull();
+    assertNotNull(rpcController);
+  }
 }

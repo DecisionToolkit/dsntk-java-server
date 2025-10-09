@@ -16,15 +16,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ContextConfiguration(classes = RpcServerApplication.class)
 class SystemControllerTest {
 
-    @Value(value = "${local.server.port}")
-    private int port;
+  @Value(value = "${local.server.port}")
+  private int port;
 
-    @Autowired
-    private TestRestTemplate restTemplate;
+  @Autowired
+  private TestRestTemplate restTemplate;
 
-    @Test
-    void greetingShouldReturnDefaultMessage() {
-        assertThat(this.restTemplate.getForObject("http://127.0.0.1:" + port + "/api/rest/v1/system/info", String.class))
-                .contains("{\"data\":{\"name\":\"Java RPC server for DecisionToolkit\",\"version\":\"0.0.2\"}}");
-    }
+  @Test
+  void greetingShouldReturnDefaultMessage() {
+    assertThat(this.restTemplate.getForObject("http://127.0.0.1:" + port + "/api/rest/v1/system/info", String.class))
+        .contains("{\"data\":{\"name\":\"Java RPC server for DecisionToolkit\",\"version\":\"0.0.2\"}}");
+  }
 }

@@ -17,33 +17,33 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(RequestMappings.M_RPC_SERVER)
 public class SystemController {
 
-    @Value("${app.version}")
-    private String appVersion;
+  @Value("${app.version}")
+  private String appVersion;
 
-    @Value("${app.name}")
-    private String appName;
+  @Value("${app.name}")
+  private String appName;
 
-    /**
-     * Factory for system info DTO.
-     */
-    private final SystemInfoDtoFactory systemInfoDtoFactory;
+  /**
+   * Factory for system info DTO.
+   */
+  private final SystemInfoDtoFactory systemInfoDtoFactory;
 
-    /**
-     * Initializes system controller.
-     *
-     * @param systemInfoDtoFactory Factory for system info DTO.
-     */
-    public SystemController(SystemInfoDtoFactory systemInfoDtoFactory) {
-        this.systemInfoDtoFactory = systemInfoDtoFactory;
-    }
+  /**
+   * Initializes system controller.
+   *
+   * @param systemInfoDtoFactory Factory for system info DTO.
+   */
+  public SystemController(SystemInfoDtoFactory systemInfoDtoFactory) {
+    this.systemInfoDtoFactory = systemInfoDtoFactory;
+  }
 
-    /**
-     * Returns system info.
-     *
-     * @return System info DTO wrapped in ResultDTO.
-     */
-    @GetMapping(RequestMappings.M_V1 + RequestMappings.M_SYSTEM_INFO)
-    public ResultDto<SystemInfoDto> getSystemInfo() {
-        return this.systemInfoDtoFactory.from(appName, appVersion);
-    }
+  /**
+   * Returns system info.
+   *
+   * @return System info DTO wrapped in ResultDTO.
+   */
+  @GetMapping(RequestMappings.M_V1 + RequestMappings.M_SYSTEM_INFO)
+  public ResultDto<SystemInfoDto> getSystemInfo() {
+    return this.systemInfoDtoFactory.from(appName, appVersion);
+  }
 }
