@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+env:
+  RPC_SERVER_VERSION: 0.0.2
+
 jobs:
 
   build:
@@ -34,8 +37,11 @@ jobs:
       - name: Build using Maven
         run: mvn package
 
+      - name: Build Docker image
+        run: docker build -t rpc:${{ env.RPC_SERVER_VERSION }} .
+
       - name: Upload the package
         uses: actions/upload-artifact@v4
         with:
           name: server
-          path: target/server-*.jar
+          path: target/server-${{ env.RPC_SERVER_VERSION }}.jar
