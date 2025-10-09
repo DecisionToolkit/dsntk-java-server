@@ -9,6 +9,7 @@ on:
       - main
 
 env:
+  OWNER: $(echo ${{ github.repository_owner) }})
   RPC_SERVER_VERSION: 0.0.2
 
 jobs:
@@ -52,7 +53,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ toLower(github.repository_owner) }}/rpc:${{ env.RPC_SERVER_VERSION }}
+          tags: ghcr.io/${{ env.OWNER }}/rpc:${{ env.RPC_SERVER_VERSION }}
 
       - name: Upload the package
         uses: actions/upload-artifact@v4
