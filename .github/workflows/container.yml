@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  OWNER: $(echo ${{ github.repository_owner) }} )
+  OWNER: $(echo ${{ github.repository_owner }} )
   RPC_SERVER_VERSION: 0.0.2
 
 jobs:
