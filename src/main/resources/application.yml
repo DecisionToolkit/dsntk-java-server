@@ -1,5 +1,5 @@
 app:
-  name: "Java RPC server for Decision Toolkit"
+  name: "Java RPC server for DecisionToolkit"
   version: 0.0.1
 
 spring:

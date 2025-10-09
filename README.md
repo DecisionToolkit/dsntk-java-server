@@ -22,7 +22,7 @@
 external functions written in Java. Details can be found in the document
 **Decision Model and Notation Version 1.4** on pages 117-118 (externally-defined functions).
 
-While [Decision Toolkit](https://github.com/dsntk/dsntk-rs) (**DSNTK**)
+While [DecisionToolkit](https://github.com/dsntk/dsntk-rs) (**dsntk**)
 is written in [Rust](https://www.rust-lang.org), then calling Java functions requires
 an RPC (Remote Procedure Call) server. This project is a Java implementation of such server.
 
@@ -67,7 +67,7 @@ curl http://127.0.0.1:22023/api/rest/v1/system/info
 The output should look like this:
 
 ```shell
-{"data": {"name": "Java RPC server for Decision Toolkit","version": "0.0.1"}}
+{"data": {"name": "Java RPC server for DecisionToolkit","version": "0.0.1"}}
 ```
 
 ## Endpoints
@@ -78,7 +78,7 @@ The output should look like this:
 
 - **POST** http://127.0.0.1:22023/api/rest/v1/rpc/evaluate
 
-  This endpoint is used directly by **Decision Toolkit** to evaluate Java functions.
+  This endpoint is used directly by **DecisionToolkit** to evaluate Java functions.
 
 ## License
 
