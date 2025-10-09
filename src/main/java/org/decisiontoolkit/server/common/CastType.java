@@ -16,14 +16,14 @@ public enum CastType {
 
   public boolean isPrimitive() {
     return this == CT_BYTE ||
-        this == CT_SHORT ||
-        this == CT_INT ||
-        this == CT_LONG ||
-        this == CT_FLOAT ||
-        this == CT_DOUBLE ||
-        this == CT_CHAR ||
-        this == CT_BOOLEAN ||
-        this == CT_STRING;
+      this == CT_SHORT ||
+      this == CT_INT ||
+      this == CT_LONG ||
+      this == CT_FLOAT ||
+      this == CT_DOUBLE ||
+      this == CT_CHAR ||
+      this == CT_BOOLEAN ||
+      this == CT_STRING;
   }
 
   public static CastType fromClass(Class<?> clazz) throws RpcException {

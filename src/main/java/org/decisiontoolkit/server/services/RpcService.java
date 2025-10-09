@@ -20,24 +20,24 @@ public class RpcService {
    * Collection of classes for primitive types.
    */
   private static final Map<String, Class<?>> PRIMITIVE_CLASSES = (
-      Collections.unmodifiableMap(
-          new HashMap<>() {
-            {
-              for (Class<?> cls : new Class<?>[]{
-                  boolean.class,
-                  char.class,
-                  byte.class,
-                  short.class,
-                  int.class,
-                  long.class,
-                  float.class,
-                  double.class
-              }) {
-                put(cls.getName(), cls);
-              }
-            }
+    Collections.unmodifiableMap(
+      new HashMap<>() {
+        {
+          for (Class<?> cls : new Class<?>[]{
+            boolean.class,
+            char.class,
+            byte.class,
+            short.class,
+            int.class,
+            long.class,
+            float.class,
+            double.class
+          }) {
+            put(cls.getName(), cls);
           }
-      )
+        }
+      }
+    )
   );
 
   public ValueDto evaluate(String className, String methodName, List<String> parameterTypes, List<ValueDto> arguments) throws RpcException {
