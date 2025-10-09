@@ -1,4 +1,4 @@
-package io.dsntk.server.rest.controllers;
+package org.decisiontoolkit..server.rest.controllers;
 
 /**
  * Request mapping definitions.
