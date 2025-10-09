@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  OWNER: echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]'
+  OWNER: $(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')
   RPC_SERVER_VERSION: 0.0.2
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show
-        run: echo ${{ env.OWNER }}
+        run: ${{ env.OWNER }}
 
 #      - name: Checkout repository
 #        uses: actions/checkout@v5
