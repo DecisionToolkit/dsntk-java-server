@@ -1,11 +1,11 @@
 package org.decisiontoolkit.server.rest.controllers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.decisiontoolkit.server.rest.dto.ResultDto;
 import org.decisiontoolkit.server.rest.dto.ValueDto;
 import org.decisiontoolkit.server.rest.errors.RpcException;
 import org.decisiontoolkit.server.rest.params.RpcParams;
 import org.decisiontoolkit.server.services.RpcService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +21,9 @@ public class RpcController {
 
   private final RpcService rpcService;
 
-  /** Initializes RPC controller. */
+  /**
+   * Initializes RPC controller.
+   */
   public RpcController(RpcService rpcService) {
     this.rpcService = rpcService;
   }

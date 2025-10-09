@@ -1,20 +1,24 @@
 package org.decisiontoolkit.server.rest.params;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.decisiontoolkit.server.rest.dto.ValueDto;
 import lombok.Getter;
 import lombok.Setter;
+import org.decisiontoolkit.server.rest.dto.ValueDto;
 
 import java.util.ArrayList;
 
 @Getter
 @Setter
 public class RpcParams {
-  /** Name of the class where called static method is defined. */
+  /**
+   * Name of the class where called static method is defined.
+   */
   @JsonProperty("className")
   private String className;
 
-  /** Name of the method to be called. */
+  /**
+   * Name of the method to be called.
+   */
   @JsonProperty("methodName")
   private String methodName;
 

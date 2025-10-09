@@ -1,7 +1,7 @@
 package org.decisiontoolkit.server.rest.errors;
 
-import org.decisiontoolkit.server.rest.dto.ErrorDto;
 import lombok.extern.slf4j.Slf4j;
+import org.decisiontoolkit.server.rest.dto.ErrorDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;

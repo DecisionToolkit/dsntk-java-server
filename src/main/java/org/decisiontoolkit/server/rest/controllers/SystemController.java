@@ -1,9 +1,9 @@
 package org.decisiontoolkit.server.rest.controllers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.decisiontoolkit.server.rest.dto.ResultDto;
 import org.decisiontoolkit.server.rest.dto.SystemInfoDto;
 import org.decisiontoolkit.server.rest.dto.SystemInfoDtoFactory;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +23,9 @@ public class SystemController {
   @Value("${app.name}")
   private String appName;
 
-  /** Factory for system info DTO. */
+  /**
+   * Factory for system info DTO.
+   */
   private final SystemInfoDtoFactory systemInfoDtoFactory;
 
   /**

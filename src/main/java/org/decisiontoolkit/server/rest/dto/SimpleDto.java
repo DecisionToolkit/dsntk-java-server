@@ -1,12 +1,12 @@
 package org.decisiontoolkit.server.rest.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 import org.decisiontoolkit.server.common.CastType;
 import org.decisiontoolkit.server.common.Utils;
 import org.decisiontoolkit.server.common.XsdType;
 import org.decisiontoolkit.server.rest.errors.RpcException;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.lang.reflect.Array;
 
@@ -17,15 +17,21 @@ import java.lang.reflect.Array;
 @Setter
 public class SimpleDto {
 
-  /** Name of the value's type. */
+  /**
+   * Name of the value's type.
+   */
   @JsonProperty("type")
   private String typ;
 
-  /** Value represented as text. */
+  /**
+   * Value represented as text.
+   */
   @JsonProperty("text")
   private String text;
 
-  /** Flag indicating if the value is `nil`. */
+  /**
+   * Flag indicating if the value is `nil`.
+   */
   @JsonProperty("isNil")
   private boolean nil;
 

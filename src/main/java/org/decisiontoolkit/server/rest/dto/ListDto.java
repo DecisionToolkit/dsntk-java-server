@@ -16,11 +16,15 @@ import java.util.ArrayList;
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 public class ListDto {
 
-  /** Items in the list ov values. */
+  /**
+   * Items in the list ov values.
+   */
   @JsonProperty("items")
   private ArrayList<ValueDto> items;
 
-  /** Flag indicating if the value is of the list is `nil`. */
+  /**
+   * Flag indicating if the value is of the list is `nil`.
+   */
   @JsonProperty("isNil")
   private boolean nil;
 }

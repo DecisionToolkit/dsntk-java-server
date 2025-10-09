@@ -11,7 +11,9 @@ import lombok.Getter;
 @Getter
 public class ResultDto<T> {
 
-  /** Data sent as a result. */
+  /**
+   * Data sent as a result.
+   */
   @JsonProperty("data")
   private T data;
 

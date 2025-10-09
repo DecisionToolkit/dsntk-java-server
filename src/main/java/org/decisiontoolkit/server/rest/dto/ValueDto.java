@@ -1,10 +1,10 @@
 package org.decisiontoolkit.server.rest.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.decisiontoolkit.server.common.CastType;
-import org.decisiontoolkit.server.rest.errors.RpcException;
 import lombok.Getter;
 import lombok.Setter;
+import org.decisiontoolkit.server.common.CastType;
+import org.decisiontoolkit.server.rest.errors.RpcException;
 
 import java.util.ArrayList;
 
@@ -15,15 +15,21 @@ import java.util.ArrayList;
 @Setter
 public class ValueDto {
 
-  /** Simple value. */
+  /**
+   * Simple value.
+   */
   @JsonProperty("simple")
   private SimpleDto simple;
 
-  /** Object value. */
+  /**
+   * Object value.
+   */
   @JsonProperty("components")
   private ArrayList<ComponentDto> object;
 
-  /** List value. */
+  /**
+   * List value.
+   */
   @JsonProperty("list")
   private ListDto list;
 

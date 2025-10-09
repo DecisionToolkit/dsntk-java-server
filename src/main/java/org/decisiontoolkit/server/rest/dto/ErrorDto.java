@@ -8,7 +8,9 @@ import lombok.Setter;
 @Setter
 public class ErrorDto {
 
-  /** Error details. */
+  /**
+   * Error details.
+   */
   @JsonProperty("error")
   private String details;
 
