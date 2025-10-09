@@ -9,7 +9,8 @@ on:
       - main
 
 env:
-  OWNER: $(echo ${{ github.repository_owner }} )
+  # Repository owner name for GitHub container registry must be lowercase.
+  OWNER: $(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]' )
   RPC_SERVER_VERSION: 0.0.2
 
 jobs:
