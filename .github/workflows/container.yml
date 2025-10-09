@@ -9,7 +9,6 @@ on:
       - main
 
 env:
-  OWNER: $(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')
   RPC_SERVER_VERSION: 0.0.2
 
 jobs:
@@ -19,7 +18,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show
-        run: ${{ env.OWNER }}
+        run: echo ${GITHUB_REPOSITORY,,}
+
+#      - name: downcase REPO
+#        run: |
+#          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+#          echo "REPO=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')
+#
+#      - name: use REPO
+#        run: |
+#          echo "The value of REPO is: ${REPO}"
 
 #      - name: Checkout repository
 #        uses: actions/checkout@v5
