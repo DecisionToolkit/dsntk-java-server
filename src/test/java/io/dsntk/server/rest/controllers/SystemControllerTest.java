@@ -25,6 +25,6 @@ public class SystemControllerTest {
   @Test
   public void greetingShouldReturnDefaultMessage() {
     assertThat(this.restTemplate.getForObject("http://127.0.0.1:" + port + "/api/rest/v1/system/info", String.class))
-      .contains("{\"data\":{\"name\":\"Java RPC server for DecisionToolkit\",\"version\":\"0.0.1\"}}");
+      .contains("{\"data\":{\"name\":\"Java RPC server for DecisionToolkit\",\"version\":\"0.0.2\"}}");
   }
 }

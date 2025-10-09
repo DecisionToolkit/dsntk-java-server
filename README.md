@@ -42,12 +42,12 @@ built from source or run in Docker container.
 mvn package
 ```
 
-The **server-0.0.1.jar** can be found in **./target** directory
+The **server-0.0.2.jar** can be found in **./target** directory
 
 ## Starting the server
 
 ```shell
-java -jar server-0.0.1.jar
+java -jar server-0.0.2.jar
 ```
 
 ## Docker container
@@ -67,7 +67,7 @@ curl http://127.0.0.1:22023/api/rest/v1/system/info
 The output should look like this:
 
 ```shell
-{"data": {"name": "Java RPC server for DecisionToolkit","version": "0.0.1"}}
+{"data": {"name": "Java RPC server for DecisionToolkit","version": "0.0.2"}}
 ```
 
 ## Endpoints
