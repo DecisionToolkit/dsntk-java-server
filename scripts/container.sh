@@ -23,6 +23,5 @@ docker run --name $NAME -d --restart always -p 22023:22023 $NAME:$VERSION
 sleep 5s
 
 # test started server
-curl http://127.0.0.1:22023/api/rest/v1/system/info
-echo ""
-echo "OK"
+curl -w '\n' http://127.0.0.1:22023/api/rest/v1/system/info
+echo -e "\033[32mOK\033[0m"
