@@ -1,6 +1,6 @@
-**DSNTK** | Java RPC server
+**dsntk** | DecisionToolkit
 
-# Java RPC server for Decision Toolkit
+# Java RPC server
 
 [![MIT licensed][mit-badge]][mit-url]
 [![Apache 2.0 licensed][apache-badge]][apache-url]
@@ -39,7 +39,7 @@ built from source or run in Docker container.
 4. Build the server:
 
 ```shell
-$ mvn package
+mvn package
 ```
 
 The **server-0.0.1.jar** can be found in **./target** directory
@@ -47,7 +47,7 @@ The **server-0.0.1.jar** can be found in **./target** directory
 ## Starting the server
 
 ```shell
-$ java -jar server-0.0.1.jar
+java -jar server-0.0.1.jar
 ```
 
 ## Docker container
@@ -55,13 +55,13 @@ $ java -jar server-0.0.1.jar
 Docker container can be built and run using prepared script file:
 
 ```shell
-$ ./container.sh
+./container.sh
 ```
 
 After building, the new container is started and ready to accept requests, try:
 
 ```shell
-$ curl http://127.0.0.1:22023/api/rest/v1/system/info
+curl http://127.0.0.1:22023/api/rest/v1/system/info
 ```
 
 The output should look like this:
