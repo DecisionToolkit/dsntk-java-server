@@ -6,9 +6,9 @@ NAME=rpc
 # Clean before proceeding.
 echo "Stopped container: $(docker stop $NAME)"
 echo "Removed container: $(docker rm $NAME)"
-docker rmi "$(docker images | grep /$NAME | awk '{print $3}' | xargs)"
+docker rmi "$(docker images --format table | grep "/$NAME" | awk '{print $3}' | xargs)"
 
-# Build the docker image.
+# Build and start the docker image.
 docker-compose up -d
 
 # Wait for the server to start inside the container.

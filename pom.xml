@@ -60,6 +60,7 @@
           </excludes>
         </configuration>
       </plugin>
+      <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -68,8 +69,8 @@
           <compilerArgs>
             <arg>-proc:full</arg>
           </compilerArgs>
-          <source>25</source>
-          <target>25</target>
+          <source>21</source>
+          <target>21</target>
         </configuration>
       </plugin>
     </plugins>

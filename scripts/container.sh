@@ -8,7 +8,7 @@ VERSION=0.0.2
 mvn clean
 echo "Stopped container: $(docker stop $NAME)"
 echo "Removed container: $(docker rm $NAME)"
-docker rmi "$(docker images | grep /$NAME | awk '{print $3}' | xargs)"
+docker rmi "$(docker images --format table | grep "/$NAME" | awk '{print $3}' | xargs)"
 
 # Build the RPC server.
 mvn package
