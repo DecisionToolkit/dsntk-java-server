@@ -1,4 +1,4 @@
-FROM openjdk:21-slim
+FROM eclipse-temurin:25-alpine
 
 COPY ./target/server-0.0.2.jar /
 
