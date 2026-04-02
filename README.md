@@ -1,4 +1,4 @@
-**dsntk** | DecisionToolkit
+**dsntk** | ÐecisionToolkit
 
 # Java RPC server
 
@@ -15,39 +15,40 @@
 [apache-notice-url]: NOTICE
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
 [cc-url]: https://github.com/dsntk/dsntk-java-server/blob/main/CODE_OF_CONDUCT.md
+[DMN]: https://www.omg.org/dmn
+[ÐecisionToolkit]: https://github.com/DecisionToolkit
+[Rust]: https://www.rust-lang.org
+[releases]: https://github.com/DecisionToolkit/dsntk-java-server/releases
 
 ## Overview
 
-[DMN™](https://www.omg.org/dmn) specification defines functionality that allows to call
-external functions written in Java. Details can be found in the document
-**Decision Model and Notation Version 1.4** on pages 117-118 (externally-defined functions).
-
-While [DecisionToolkit](https://github.com/dsntk/dsntk-rs) (**dsntk**)
-is written in [Rust](https://www.rust-lang.org), then calling Java functions requires
-an RPC (Remote Procedure Call) server. This project is a Java implementation of such server.
+The [DMN]™ specification defines functionality that allows calling externally defined functions,
+including those implemented in Java. More details can be found in the official specification under
+the chapter _"Externally-defined functions"_. Since [ÐecisionToolkit] is implemented in [Rust],
+invoking Java functions requires a Remote Procedure Call (RPC) server.
+This project provides a Java implementation of such an RPC server.
 
 ## Installation
 
-Java RPC server can be downloaded from [releases](https://github.com/dsntk/dsntk-java-server/releases)
-built from source or run in Docker container.
+The RPC server for Java can be downloaded from [releases], built from source or run in Docker container.
 
 ## Building from source
 
-1. Clone this repository.
-2. Install Java 17 or newer.
-3. Install Maven.
+1. Install Java 25 or newer.
+2. Install Maven.
+3. Clone this repository.
 4. Build the server:
 
 ```shell
 mvn package
 ```
 
-The **server-0.0.2.jar** can be found in **./target** directory
+The `server-1.0.0.jar` can be found in `./target` directory
 
 ## Starting the server
 
 ```shell
-java -jar server-0.0.2.jar
+java -jar server-1.0.0.jar
 ```
 
 ## Docker container
@@ -55,10 +56,10 @@ java -jar server-0.0.2.jar
 Docker container can be built and run using prepared script file:
 
 ```shell
-./container.sh
+./scripts/container.sh
 ```
 
-After building, the new container is started and ready to accept requests, try:
+After building, the new container is started and ready to accept requests. Try:
 
 ```shell
 curl http://127.0.0.1:22023/api/rest/v1/system/info
@@ -67,18 +68,35 @@ curl http://127.0.0.1:22023/api/rest/v1/system/info
 The output should look like this:
 
 ```shell
-{"data": {"name": "Java RPC server for DecisionToolkit","version": "0.0.2"}}
+{"data":{"name":"Java RPC server for ÐecisionToolkit","version":"1.0.0"}}
+```
+
+To get a pretty-printed JSON, try:
+
+```shell
+curl -s http://127.0.0.1:22023/api/rest/v1/system/info | jq
+```
+
+Expected output:
+
+```json
+{
+  "data": {
+    "name": "Java RPC server for ÐecisionToolkit",
+    "version": "1.0.0"
+  }
+}
 ```
 
 ## Endpoints
 
 - **GET** http://127.0.0.1:22023/api/rest/v1/system/info
 
-  Utility endpoint for checking the connectivity with the running server.
+  Utility endpoint for verifying connectivity with the running server.
 
 - **POST** http://127.0.0.1:22023/api/rest/v1/rpc/evaluate
 
-  This endpoint is used directly by **DecisionToolkit** to evaluate Java functions.
+  Endpoint directly used by **ÐecisionToolkit** to evaluate Java functions in compliance with the DMN specification.
 
 ## License
 

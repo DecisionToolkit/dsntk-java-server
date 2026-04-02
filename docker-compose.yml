@@ -1,7 +1,7 @@
 services:
 
   rpc:
-    image: ghcr.io/decisiontoolkit/rpc:0.0.2
+    image: ghcr.io/decisiontoolkit/rpc:1.0.0
     container_name: rpc
     restart: always
     ports:

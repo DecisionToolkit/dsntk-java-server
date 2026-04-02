@@ -31,7 +31,7 @@ public class RpcServerApplication implements ApplicationRunner {
    *
    * @param args Command-line arguments.
    */
-  public static void main(String[] args) {
+  static void main(String[] args) {
     SpringApplication.run(RpcServerApplication.class, args);
   }
 

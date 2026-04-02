@@ -12,6 +12,7 @@ tasks:
   clean:
     desc: Cleans built artefacts
     cmds:
+      - cmd: rm -rf log
       - cmd: mvn clean
 
   container:
@@ -30,6 +31,17 @@ tasks:
       - cmd: mvn package
 
   test:
-    desc: Runs all tests
+    desc: Executes all tests
     cmds:
       - cmd: mvn test
+
+  run:
+    desc: Runs the server locally using Maven
+    cmds:
+      - cmd: mvn compile exec:java
+
+  serve:
+    desc: Starts the server locally
+    cmds:
+      - cmd: mvn package
+      - cmd: java -jar ./target/server-1.0.0.jar
