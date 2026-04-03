@@ -34,7 +34,7 @@ The RPC server for Java can be downloaded from [releases], built from source or 
 
 ## Building from source
 
-1. Install Java 21 or newer.
+1. Install Java 21.
 2. Install Maven.
 3. Clone this repository.
 4. Build the server:
