@@ -10,7 +10,7 @@ permissions:
   packages: write
 
 env:
-  RPC_SERVER_VERSION: 0.0.2
+  RPC_SERVER_VERSION: 1.0.0
 
 jobs:
 
