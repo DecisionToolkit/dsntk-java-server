@@ -96,7 +96,7 @@ Expected output:
 
 - **POST** http://127.0.0.1:22023/api/rest/v1/rpc/evaluate
 
-  Endpoint directly used by **ÐecisionToolkit** to evaluate Java functions in compliance with the DMN specification.
+  Endpoint directly used by [ÐecisionToolkit] to evaluate Java functions in compliance with the [DMN]™ specification.
 
 ## License
 
