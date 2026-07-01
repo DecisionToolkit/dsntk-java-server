@@ -1,0 +1,34 @@
+.tasks
+
+  .build
+    .desc Builds the application
+    .cmd mvn compile
+
+  .clean
+    .desc Cleans built artefacts
+    .cmd rm -rf log
+    .cmd mvn clean
+
+  .container
+    .desc Rebuilds the Docker container
+    .cmd ./scripts/container.sh
+
+  .composer
+    .desc Rebuilds the Docker container using docker-compose
+    .cmd ./scripts/composer.sh
+
+  .package
+    .desc Packages the application
+    .cmd mvn package
+
+  .test
+    .desc Executes all tests
+    .cmd mvn test
+
+  .run
+    .desc Runs the server locally using Maven
+    .cmd mvn compile exec:java
+
+  .serve
+    .desc Starts the server locally from JAR
+    .cmd java -jar ./target/server-1.0.1.jar

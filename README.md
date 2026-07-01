@@ -45,12 +45,12 @@ The RPC server for Java can be downloaded from [releases], built from source or 
 mvn package
 ```
 
-The `server-1.0.0.jar` can be found in `./target` directory
+The `server-1.0.1.jar` can be found in `./target` directory
 
 ## Starting the server
 
 ```shell
-java -jar server-1.0.0.jar
+java -jar server-1.0.1.jar
 ```
 
 ## Docker container
@@ -70,7 +70,7 @@ curl http://127.0.0.1:22023/api/rest/v1/system/info
 The output should look like this:
 
 ```shell
-{"data":{"name":"Java RPC server for ÐecisionToolkit","version":"1.0.0"}}
+{"data":{"name":"Java RPC server for ÐecisionToolkit","version":"1.0.1"}}
 ```
 
 To get a pretty-printed JSON, try:
@@ -85,7 +85,7 @@ Expected output:
 {
   "data": {
     "name": "Java RPC server for ÐecisionToolkit",
-    "version": "1.0.0"
+    "version": "1.0.1"
   }
 }
 ```
