@@ -2,7 +2,7 @@
 
 # Set variables.
 NAME=rpc
-VERSION=1.0.1
+VERSION=1.0.2
 
 # Clean before proceeding.
 mvn clean
