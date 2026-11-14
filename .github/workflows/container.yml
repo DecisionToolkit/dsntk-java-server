@@ -1,16 +1,14 @@
 name: Container
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
   packages: write
 
 env:
-  RPC_SERVER_VERSION: 1.0.2
+  RPC_SERVER_VERSION: 1.0.3
 
 jobs:
 
@@ -56,6 +54,8 @@ jobs:
         with:
           context: .
           push: true
+          provenance: false
+          sbom: false
           tags: ghcr.io/${{ env.REPOSITORY_OWNER }}/rpc:${{ env.RPC_SERVER_VERSION }}
 
       - name: Upload the package

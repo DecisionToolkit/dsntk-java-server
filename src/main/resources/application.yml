@@ -1,6 +1,6 @@
 app:
   name: "Java RPC server for ÐecisionToolkit"
-  version: 1.0.2
+  version: 1.0.3
 
 spring:
   main:

@@ -9,11 +9,11 @@ echo "Removed container: $(docker rm $NAME)"
 docker rmi "$(docker images --format table | grep "/$NAME" | awk '{print $3}' | xargs)"
 
 # Build and start the docker image.
-docker-compose up -d
+docker compose up -d
 
-# Wait for the server to start inside the container.
+# Wait for the RPC server starting inside the container.
 echo -e "\nWaiting 5s..."
 sleep 5s
 
-# Test the started server
+# Test started RPC server
 curl -w '\n' http://127.0.0.1:22023/api/rest/v1/system/info
