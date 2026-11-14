@@ -31,4 +31,4 @@
 
   .serve
     .desc Starts the server locally from JAR
-    .cmd java -jar ./target/server-1.0.2.jar
+    .cmd java -jar ./target/server-1.0.3.jar
